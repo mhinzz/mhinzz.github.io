@@ -243,9 +243,9 @@ section h2::after {
 
 #research li {
     padding: 1rem;
-    background: var(--light);
+    background: var(--mid);
     border-radius: 6px;
-    border-left: 3px solid var(--accent);
+    border-left: 3px solid var(--accentAlt);
     transition: transform 0.3s;
 }
 
