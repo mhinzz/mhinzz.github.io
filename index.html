@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Matthew Hinz</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <header>
+                <h1>Matthew Hinz</h1>
+                <p class="affiliation">Masters of Arts Student in Philosophy<br>University of Waterloo</p>
+            </header>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="papers.html">Papers</a>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <section id="about">
+                <h2>About Me</h2>
+                <p>
+                    Welcome! I'm an MA Philosophy student at the University of Waterloo. 
+                </p>
+                <p>
+                    My current project is on how responsibility for AI harms should be distributed among creators, institutions, and users, focusing on both discriminatory screening systems and large language models that are designed to invite misplaced reliance.                    
+                </p>
+                <p>
+                    I completed my undergraduate degree in Computer Science at the University of British Columbia in Vancouver in 2022.
+                </p>
+                <p>
+                    Following that I worked for the federal government of Canada before deciding to pursue graduate studies in philosophy.
+                </p>
+                <p>
+                    I am always interested in collaborating on research projects. Feel free to reach out!
+                </p>
+            </section>
+
+            <section id="research">
+                <h2>Research Interests</h2>
+                <ul>
+                    <li>Philosophy of AI / AI Ethics</li>
+                    <li>Philosophy of Language</li>
+                    <li>Epistemology / Social Epistemology</li>
+                    <li>Ethics / Moral Philosophy</li>
+                    <li>Philosophy of Technology</li>
+                </ul>
+            </section>
+
+            <!-- <section id="publications">
+                <h2>Publications</h2>
+                
+                <div class="publication">
+                    <div class="title">Your First Paper Title</div>
+                    <div class="authors"><strong>Your Name</strong>, Co-Author, Another Author</div>
+                    <div class="venue">Conference/Journal Name, 2024</div>
+                </div>
+
+                <div class="publication">
+                    <div class="title">Your Second Paper Title</div>
+                    <div class="authors">Co-Author, <strong>Your Name</strong>, Another Author</div>
+                    <div class="venue">Conference/Journal Name, 2023</div>
+                </div>
+            </section> -->
+
+            <section id="teaching">
+                <h2>Teaching Assistant Positions</h2>
+                <ul>
+                    <li><span>PHIL 145</span>Introduction to Critical Thinking (Spring 2026)</li>
+                    <li><span>PHIL 228</span>Ethics and AI (Fall 2025)</li>
+                </ul>
+            </section>
+
+            <section id="news">
+                <h2>News</h2>
+                <ul>
+                    <li><strong>Sept 2025:</strong> Started a new position at University of Waterloo</li>
+                </ul>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <p><strong>Email:</strong> <a href="mailto:m2hinz@uwaterloo.ca">m2hinz@uwaterloo.ca</a></p>
+                <!-- <p><strong>Office:</strong> Building Name, Room Number</p> -->
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 Matthew Hinz. Last updated: April 2026.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Scroll animation: reveal sections as user scrolls
+        (function() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section').forEach(sec => {
+                observer.observe(sec);
+            });
+        })();
+    </script>
+</body>
+</html>
+
+<!-- 
+List of things to change: 
+    Colour scheme
+    mouseover effects on research interests and nav links
+    space for a photo of me in the sidebar
+    link to CV
+    link to phil papers 
+    link to department page? 
+-->
