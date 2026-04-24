@@ -8,7 +8,6 @@
     --mid: #28382d;
     --dark: #2a3129;
     --text: #ffffff;
-    --darkText: #616161;
 
     --text-shadow-small: 1px 1px 4px rgba(0, 0, 0, 0.75);
     --text-shadow-big:   2px 2px 4px rgba(0, 0, 0, 0.75);
@@ -22,7 +21,6 @@ body.light-mode {
     --mid: #e0e0e0;
     --dark: #c0c0c0;
     --text: #000000;
-    --darkText: #616161;
 
     --text-shadow-small: none;
     --text-shadow-big: none;
