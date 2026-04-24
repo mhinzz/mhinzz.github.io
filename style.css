@@ -33,6 +33,7 @@ body.light-mode {
     display: inline-block;
     width: 52px;
     height: 28px;
+    transform: translateX(15px) translateY(15px);
 }
 
 .theme-switch input {
