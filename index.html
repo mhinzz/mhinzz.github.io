@@ -88,7 +88,7 @@
             </section>
 
             <section id="contact">
-                <h2>Contact</h2>
+                <h2><strong>Contact</strong></h2>
                 <p><strong>Email:</strong> <a href="mailto:m2hinz@uwaterloo.ca">m2hinz@uwaterloo.ca</a></p>
                 <!-- <p><strong>Office:</strong> Building Name, Room Number</p> -->
             </section>
@@ -100,7 +100,7 @@
     </div>
 
     <script>
-        // Scroll animation: reveal sections as user scrolls
+        // Scroll animation and theme toggle
         (function() {
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -113,12 +113,6 @@
             document.querySelectorAll('section').forEach(sec => {
                 observer.observe(sec);
             });
-
-            // const toggle = document.getElementById("theme-toggle");
-
-            // toggle.addEventListener("change", () => {
-            //     document.body.classList.toggle("light-mode", toggle.checked);
-            // });
 
             const toggle = document.getElementById("theme-toggle");
 
