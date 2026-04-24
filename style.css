@@ -8,10 +8,70 @@
     --mid: #28382d;
     --dark: #2a3129;
     --text: #ffffff;
-    /* --headerText: #c0c0c0; */
     --darkText: #616161;
-    --highlight: #00ffea;
+
+    --text-shadow-small: 1px 1px 4px rgba(0, 0, 0, 0.75);
+    --text-shadow-big:   2px 2px 4px rgba(0, 0, 0, 0.75);
 }
+
+body.light-mode {
+    --nameText: #2a3129;
+    --accent: #28382d;
+    --accentAlt: #14751c;
+    --light: #f0f0f0;
+    --mid: #e0e0e0;
+    --dark: #c0c0c0;
+    --text: #000000;
+    --darkText: #616161;
+
+    --text-shadow-small: none;
+    --text-shadow-big: none;
+}
+
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 28px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background-color: var(--dark);
+    border-radius: 999px;
+    transition: background-color 0.3s ease;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 22px;
+    width: 22px;
+    left: 3px;
+    top: 3px;
+    background-color: var(--accent);
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.theme-switch input:checked + .slider {
+    background-color: var(--light);
+}
+
+.theme-switch input:checked + .slider::before {
+    transform: translateX(24px);
+}
+
+p, li, div {text-shadow: var(--text-shadow-small);}
+h1, h2, h3 {text-shadow: var(--text-shadow-big);}
 
 * {
     box-sizing: border-box;
@@ -25,7 +85,7 @@ body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75)
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75) */
 }
 
 /* Asymmetrical layout container */
@@ -58,14 +118,14 @@ body {
 .sidebar h1 {
     font-size: 2rem;
     color: var(--nameText);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); */
     margin-bottom: 0.1rem;
 }
 
 .sidebar .affiliation {
     font-size: 1.25rem;
     color: var(--accent);
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); */
     line-height: 1.5;
 }
 
@@ -85,7 +145,7 @@ body {
     border-left: 3px solid transparent;
     padding-left: 1rem;
     margin-left: -1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); */
 }
 
 .sidebar nav a:hover {
@@ -158,7 +218,7 @@ section h2 {
     padding-bottom: 0.75rem;
     border-bottom: 3px solid var(--accent);
     position: relative;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); */
 }
 
 section h2::after {
@@ -272,7 +332,7 @@ section h2::after {
 
 #contact h2 {
     font-size: 1.75rem;
-    color: var(--dark);
+    color: var(--mid);
     border-bottom-color: var(--light);
 }
 
@@ -302,7 +362,7 @@ section h2::after {
     font-weight: 500;
     transition: padding-left 0.3s;
     font-size: 1.2rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); */
 }
 
 .back-link:hover {
@@ -316,7 +376,7 @@ section h2::after {
     font-size: 1.8rem;
     margin-bottom: .5rem;
     position: relative;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+    /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75); */
 }
 
 .main-content h3 {
@@ -324,7 +384,7 @@ section h2::after {
     font-size: 1.4rem;
     margin-bottom: .5rem;
     position: relative;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); */
 }
 
 /* Paper entries (for papers.html) */
@@ -341,14 +401,14 @@ section h2::after {
 
 .authors .main {
     color: var(--nameText);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); */
 }
 
 .paper .status {
     font-weight: 600;
     color: var(--accent);
     font-size: 1rem;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.75);
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.75); */
 }
 
 .paper .paper-links {
