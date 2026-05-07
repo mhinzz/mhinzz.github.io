@@ -1,0 +1,45 @@
+/* Responsive adjustments */
+
+@media (max-width: 700px) {
+	.container {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+	}
+	
+	.sidebar {
+		position: relative;
+		top: 0;
+		padding-right: 0;
+		border-right: none;
+		border-bottom: 3px solid var(--accentAlt);
+		padding-bottom: 1.5rem;
+	}
+	
+	.sidebar nav {
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 1rem;
+	}
+	
+	.sidebar nav a {
+		padding-left: 0;
+		margin-left: 0;
+		border-left: none;
+	}
+	
+	.sidebar nav a:hover {
+		padding-left: 0.5rem;
+	}
+	
+	.main-content {
+		padding-left: 0;
+	}
+	
+	section::before {
+		display: none;
+	}
+	
+	#research ul {
+		grid-template-columns: 1fr;
+	}
+}

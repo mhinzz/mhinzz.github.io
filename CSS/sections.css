@@ -1,0 +1,212 @@
+/* Section cards and page content styles */
+
+section {
+	position: relative;
+	margin-bottom: 4rem;
+	padding: 2rem;
+	background: var(--light);
+	border-radius: 8px;
+	box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+	opacity: 0;
+	transform: translateX(30px);
+	transition: opacity 0.6s ease, transform 0.6s ease, box-shadow 0.3s ease;
+}
+
+section.visible {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+section:hover {
+	box-shadow: 0 4px 30px rgba(0,0,0,1);
+}
+
+section:nth-child(1) { transition-delay: 0.1s; }
+section:nth-child(2) { transition-delay: 0.2s; }
+section:nth-child(3) { transition-delay: 0.3s; }
+section:nth-child(4) { transition-delay: 0.4s; }
+section:nth-child(5) { transition-delay: 0.5s; }
+section:nth-child(6) { transition-delay: 0.6s; }
+
+section::before {
+	content: '';
+	position: absolute;
+	left: -1rem;
+	top: 0;
+	bottom: 0;
+	width: 4px;
+	background: var(--accent);
+	border-radius: 2px;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+section.visible::before {
+	opacity: 1;
+}
+
+section h2 {
+	font-size: 1.6rem;
+	color: var(--text);
+	margin-bottom: 1.5rem;
+	padding-bottom: 0.75rem;
+	border-bottom: 3px solid var(--accent);
+	position: relative;
+}
+
+section h2::after {
+	content: '';
+	position: absolute;
+	bottom: -3px;
+	left: 0;
+	width: 80px;
+	height: 3px;
+	background: var(--nameText);
+}
+
+#research ul {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 1rem;
+	padding: 0;
+	list-style: none;
+}
+
+#research li {
+	padding: 1rem;
+	background: var(--mid);
+	border-radius: 6px;
+	border-left: 3px solid var(--accentAlt);
+	transition: transform 0.3s;
+}
+
+#research li:hover {
+	transform: translateX(5px);
+}
+
+.publication {
+	margin-bottom: 1.5rem;
+	padding: 1rem;
+	border-left: 3px solid var(--accent);
+	background: var(--light);
+}
+
+.publication .title {
+	font-weight: 600;
+	color: var(--accentAlt);
+	font-size: 1.05rem;
+}
+
+.publication .authors {
+	color: var(--text);
+	margin: 0.25rem 0;
+}
+
+.publication .venue {
+	font-style: italic;
+	color: var(--text);
+	font-size: 0.9rem;
+}
+
+#teaching ul {
+	list-style: none;
+	padding: 0;
+}
+
+#teaching li {
+	padding: 1rem;
+	margin-bottom: 0.25rem;
+	background: var(--light);
+	border-radius: 6px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+#teaching li strong {
+	color: var(--accent);
+}
+
+#news ul {
+	list-style: none;
+	padding: 0 0 0 1.5rem;
+}
+
+#news li {
+	margin-bottom: 1rem;
+	position: relative;
+}
+
+#news li::before {
+	content: '';
+	position: absolute;
+	left: -1.65rem;
+	top: 0.5rem;
+	width: 10px;
+	height: 10px;
+	background: var(--accent);
+	border-radius: 50%;
+}
+
+#news strong {
+	color: var(--accent);
+}
+
+#contact {
+	background: var(--accentAlt);
+	color: var(--light);
+}
+
+#contact h2 {
+	font-size: 1.75rem;
+	color: var(--mid);
+	border-bottom-color: var(--light);
+	text-shadow: none;
+}
+
+#contact h2::after {
+	background: var(--dark);
+}
+
+#contact p {
+	font-size: 1.25rem;
+	margin: 0.5rem 0;
+	text-shadow: none;
+}
+
+#contact a {
+	color: var(--dark);
+	text-decoration: none;
+}
+
+#contact a:hover {
+	text-decoration: underline;
+}
+
+.back-link {
+	display: inline-block;
+	color: var(--accent);
+	text-decoration: none;
+	font-weight: 500;
+	transition: padding-left 0.3s;
+	font-size: 1.2rem;
+}
+
+.back-link:hover {
+	padding-left: 0.25rem;
+	text-decoration: none;
+}
+
+.main-content h1 {
+	color: var(--nameText);
+	font-size: 1.8rem;
+	margin-bottom: .5rem;
+	position: relative;
+}
+
+.main-content h3 {
+	color: var(--accent);
+	font-size: 1.4rem;
+	margin-bottom: .5rem;
+	position: relative;
+}
