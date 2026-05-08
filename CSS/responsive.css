@@ -1,26 +1,45 @@
 /* Responsive adjustments */
 
 @media (max-width: 700px) {
+	:root {
+		--sidebar-header-height: 242px;
+	}
+
 	.container {
+		min-width: 300px;
 		grid-template-columns: 1fr;
 		gap: 2rem;
 	}
 	
 	.sidebar {
-		position: relative;
-		top: 0;
+		top: calc(-1 * var(--sidebar-header-height));
+		z-index: 100;
+		background-color: var(--mid);
+
 		padding-right: 0;
 		border-right: none;
-		border-bottom: 3px solid var(--accentAlt);
-		padding-bottom: 1.5rem;
 	}
 	
+	.sidebar header {
+		border-bottom: none;
+	}
+
 	.sidebar nav {
+		position: relative;
+		z-index: 101;
+	
 		flex-direction: row;
 		flex-wrap: wrap;
 		gap: 1rem;
-	}
+		padding: 0.5rem 0;
 	
+		border-top: 3px solid var(--accentAlt);
+		border-bottom: 3px solid var(--accentAlt);
+	
+		box-shadow: 0 0 0 1.5vmax var(--mid);
+		clip-path: inset(0 -1.5vmax);
+	}
+
 	.sidebar nav a {
 		padding-left: 0;
 		margin-left: 0;
@@ -33,13 +52,14 @@
 	
 	.main-content {
 		padding-left: 0;
+		overflow-wrap: break-word;
+	}
+
+	section:hover {
+		box-shadow: 0 2px 20px rgba(0,0,0,0.25);
 	}
 	
-	section::before {
-		display: none;
-	}
-	
-	#research ul {
+	#small-box-section ul {
 		grid-template-columns: 1fr;
 	}
 }

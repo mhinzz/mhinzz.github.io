@@ -6,8 +6,7 @@
 	display: grid;
 	grid-template-columns: 1fr 2.5fr;
 	gap: 4rem;
-	padding: 3rem 2rem;
-	min-height: 100vh;
+	padding: 2rem;
 }
 
 .sidebar {
@@ -18,33 +17,31 @@
 	border-right: 3px solid var(--accentAlt);
 }
 
-.sidebar header {
-	text-align: left;
-	margin-bottom: 2rem;
-	padding-bottom: 1rem;
-	border-bottom: 2px solid var(--accentAlt);
+.sidebar-header {
+	border-bottom: 3px solid var(--accentAlt);
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 1rem;
 }
 
-.sidebar h1 {
-	font-size: 2rem;
-	color: var(--nameText);
-	margin-bottom: 0.1rem;
+.sidebar-header h1 {
+	margin: 0rem;
 }
 
-.sidebar .affiliation {
+.affiliation {
 	font-size: 1.25rem;
 	color: var(--accent);
 	line-height: 1.5;
+	margin-top: 0rem
 }
 
-.sidebar nav {
+nav {
 	display: flex;
 	flex-direction: column;
-	gap: 0.25rem;
-	margin-bottom: 0.5rem;
 }
 
-.sidebar nav a {
+nav a {
 	color: var(--accent);
 	text-decoration: none;
 	font-weight: 500;
@@ -55,14 +52,27 @@
 	margin-left: -1rem;
 }
 
-.sidebar nav a:hover {
+nav a:hover {
 	color: var(--nameText);
 	padding-left: 1.25rem;
 	border-left-color: var(--nameText);
 }
 
-.main-content {
+.back-link {
+	color: var(--accent);
+	text-decoration: none;
+	font-weight: 500;
+	padding: 0.5rem;
+	transition: color 0.3s, padding-left 0.3s;
+	border-left: 3px solid transparent;
 	padding-left: 1rem;
+	margin-left: -1rem;
+}
+
+.back-link:hover {
+	color: var(--nameText);
+	padding-left: 1.25rem;
+	border-left-color: var(--nameText);
 }
 
 footer {
