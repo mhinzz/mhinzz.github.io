@@ -32,12 +32,21 @@
 		flex-wrap: wrap;
 		gap: 1rem;
 		padding: 0.5rem 0;
+	}
+
+	.sidebar nav::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
 	
+		left: -1vmax;
+		right: -1vmax;
+	
+		background-color: var(--mid);
 		border-top: 3px solid var(--accentAlt);
 		border-bottom: 3px solid var(--accentAlt);
-	
-		box-shadow: 0 0 0 1.5vmax var(--mid);
-		clip-path: inset(0 -1.5vmax);
+		z-index: -1;
 	}
 
 	.sidebar nav a {
