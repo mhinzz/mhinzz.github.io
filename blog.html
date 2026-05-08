@@ -12,56 +12,79 @@
 <body>
 	<div class="container">
 		<aside class="sidebar">
-			<header>
-				<h1>Matthew Hinz
-					<label class="theme-switch">
-						<input type="checkbox" id="theme-toggle">
-						<span class="slider"></span>
-					</label>
-				</h1>
-				<p class="affiliation">Masters of Arts Student in Philosophy<br>University of Waterloo</p>
+			<header class="sidebar-header">
+				<div class="header-text">
+					<h1>Matthew Hinz</h1>
+					<p class="affiliation">Masters of Arts Student in Philosophy<br>University of Waterloo</p>
+				</div>
+				<label class="theme-switch">
+					<input type="checkbox" id="theme-toggle">
+					<span class="slider"></span>
+				</label>
 			</header>
 			<nav>
-				<a href="index.html">Home</a>
 				<a href="papers.html">Papers</a>
 				<a href="blog.html">Blog</a>
 			</nav>
 		</aside>
 
 		<main class="main-content">
-			<a href="index.html" class="back-link">← Back to Home</a>
-			<h1 class="page-title">Blog</h1>
+			<h2 class="page-title">Blog</h2>
 
-			<section id="contact">
-				<h2><strong>Welcome</strong></h2>
-				<p><strong>I'm not sure yet if this will be a regular thing that I try to do once a week or month or if it will be something that I put stuff up for whenever the mood strikes me but I'm looking forward to getting my ideas out into the world.</strong></p>
+			<section id="emphasis-section">
+				<h3>Welcome</h3>
+				<p>I'm not sure yet if this will be a regular thing that I try to do once a week or month or if it will be something that I put stuff up for whenever the mood strikes me but I'm looking forward to getting my ideas out into the world.</p>
 			</section>
+
+			<!-- <section id="text-section">
+				<h3>[Paper Title]</h3>
+				
+				<div class="authors">
+					<strong class="main">Matthew Hinz, </strong>
+					Co-Author, 
+					Another Author
+				</div>
+				<div class="status">Posted: [date]</div>
+				<div class="text">
+					<p>[Blog Post]</p>
+					<p></p>
+					<p></p>
+					<p></p>
+				</div>
+			</section> -->
 			
-			<section id="blog-entry">
-				<h2>Entry 2: Why an Algorithm Can Be Neutral and Still Be Unfair</h2>
-				<h3>Published on April 3, 2026</h3>
-				<p>Suppose a company builds a hiring algorithm and tells it not to use gender. At first, that sounds fair. The system will not be told whether an applicant is a man, woman, or non-binary person, and the employer can say that the model treats everyone the same because it never sees the protected category. The difficulty is that the model may still rely on employment gaps, previous job titles, school prestige, commute distance, availability for irregular hours, or patterns of promotion in earlier workplaces, each of which may carry the history of gendered inequality into the decision.</p>
-				<p>This is one reason apparently neutral algorithms can still discriminate. The problem is not usually that the system has bad intentions, since algorithms do not have intentions in the ordinary sense, but that social inequality leaves traces in data. If a model is trained on a world structured by unequal opportunity, it can learn those structures without ever being told to look for them.</p>
-				<p>A simple version of algorithmic fairness says that protected traits should be removed. Do not use race, gender, disability, religion, or other protected categories, and the model will be neutral. That rule has some value, but it leaves too much untouched because many features can work as proxies, which means they stand in for something else. A postal code may track race or income, a school name may track class, a gap in employment may track disability, caregiving, illness, or pregnancy, and a credit history may track generations of unequal access to housing, banking, and stable employment.</p>
-				<p>Once proxies are available, removing the protected category can become more symbolic than substantive. The model may not know an applicant’s race, but it may know where they live, which school they attended, what jobs they previously held, and how people with similar profiles were treated in the past. If those patterns are shaped by discrimination, the model can reproduce them in a cleaner and more technical form.</p>
-				<p>The issue becomes clear in screening contexts such as hiring, admissions, lending, insurance, and policing, because these systems do not merely describe people but allocate opportunities, burdens, and risks. A prediction about who is likely to succeed at a job can affect who gets the chance to succeed. A prediction about who is likely to repay a loan can affect who gets access to credit. A prediction about who is likely to perform well at university can affect who is admitted into the conditions under which that performance becomes possible.</p>
-				<p>This is where the defence that “the model is only reflecting the data” begins to fail. A mirror may be passive, but a decision system is not. When an institution uses a prediction to sort applicants, it turns a pattern from the past into a rule for the future. If women were historically underpromoted in a field, past promotion data may make women appear less suited for leadership. If racialised applicants had less access to elite schools, school prestige may look like an individual measure of merit while carrying structural advantage inside it. If disabled workers faced unstable employment because workplaces failed to accommodate them, employment continuity may appear as personal reliability while encoding institutional failure.</p>
-				<p>None of this means accuracy is irrelevant, since a model that performs badly can harm everyone, including the people it is meant to help. The problem is that accuracy does not settle whether a prediction should be used. A variable can be predictively useful and still be normatively suspect, because the fact that a feature helps predict an outcome does not show that an institution is entitled to rely on it.</p>
-				<p>Fairness therefore requires more than removing explicit protected traits. Institutions need to ask which features are permissible, which outcomes should be predicted, how errors will be distributed, whether affected people can challenge decisions, and whether the system should be used in that context at all. Some systems may be improved through better data and auditing, while others may be inappropriate because the decision is too consequential, the proxies too pervasive, or the institution too unable to explain and contest the result.</p>
-				<p>The public debate around AI often makes discrimination sound like a bug that can be patched once discovered. More often, algorithmic unfairness reveals a conflict between prediction and justice, because a model can be accurate by learning from an unequal world, and an institution can become more efficient at reproducing that inequality by treating prediction as if it were neutral. Neutrality at the level of input does not guarantee fairness at the level of decision, because the past does not become harmless when it is translated into data.</p>
+			<section id="text-section">
+				<h3>Entry 2: Why an Algorithm Can Be Neutral and Still Be Unfair</h3>
+
+				<div class="text-section">
+					<div class="status">Posted: April 3, 2026</div>
+					<div class="text">
+						<p>Suppose a company builds a hiring algorithm and tells it not to use gender. At first, that sounds fair. The system will not be told whether an applicant is a man, woman, or non-binary person, and the employer can say that the model treats everyone the same because it never sees the protected category. The difficulty is that the model may still rely on employment gaps, previous job titles, school prestige, commute distance, availability for irregular hours, or patterns of promotion in earlier workplaces, each of which may carry the history of gendered inequality into the decision.</p>
+						<p>This is one reason apparently neutral algorithms can still discriminate. The problem is not usually that the system has bad intentions, since algorithms do not have intentions in the ordinary sense, but that social inequality leaves traces in data. If a model is trained on a world structured by unequal opportunity, it can learn those structures without ever being told to look for them.</p>
+						<p>A simple version of algorithmic fairness says that protected traits should be removed. Do not use race, gender, disability, religion, or other protected categories, and the model will be neutral. That rule has some value, but it leaves too much untouched because many features can work as proxies, which means they stand in for something else. A postal code may track race or income, a school name may track class, a gap in employment may track disability, caregiving, illness, or pregnancy, and a credit history may track generations of unequal access to housing, banking, and stable employment.</p>
+						<p>Once proxies are available, removing the protected category can become more symbolic than substantive. The model may not know an applicant's race, but it may know where they live, which school they attended, what jobs they previously held, and how people with similar profiles were treated in the past. If those patterns are shaped by discrimination, the model can reproduce them in a cleaner and more technical form.</p>
+						<p>The issue becomes clear in screening contexts such as hiring, admissions, lending, insurance, and policing, because these systems do not merely describe people but allocate opportunities, burdens, and risks. A prediction about who is likely to succeed at a job can affect who gets the chance to succeed. A prediction about who is likely to repay a loan can affect who gets access to credit. A prediction about who is likely to perform well at university can affect who is admitted into the conditions under which that performance becomes possible.</p>
+						<p>This is where the defence that “the model is only reflecting the data” begins to fail. A mirror may be passive, but a decision system is not. When an institution uses a prediction to sort applicants, it turns a pattern from the past into a rule for the future. If women were historically underpromoted in a field, past promotion data may make women appear less suited for leadership. If racialised applicants had less access to elite schools, school prestige may look like an individual measure of merit while carrying structural advantage inside it. If disabled workers faced unstable employment because workplaces failed to accommodate them, employment continuity may appear as personal reliability while encoding institutional failure.</p>
+						<p>None of this means accuracy is irrelevant, since a model that performs badly can harm everyone, including the people it is meant to help. The problem is that accuracy does not settle whether a prediction should be used. A variable can be predictively useful and still be normatively suspect, because the fact that a feature helps predict an outcome does not show that an institution is entitled to rely on it.</p>
+						<p>Fairness therefore requires more than removing explicit protected traits. Institutions need to ask which features are permissible, which outcomes should be predicted, how errors will be distributed, whether affected people can challenge decisions, and whether the system should be used in that context at all. Some systems may be improved through better data and auditing, while others may be inappropriate because the decision is too consequential, the proxies too pervasive, or the institution too unable to explain and contest the result.</p>
+						<p>The public debate around AI often makes discrimination sound like a bug that can be patched once discovered. More often, algorithmic unfairness reveals a conflict between prediction and justice, because a model can be accurate by learning from an unequal world, and an institution can become more efficient at reproducing that inequality by treating prediction as if it were neutral. Neutrality at the level of input does not guarantee fairness at the level of decision, because the past does not become harmless when it is translated into data.</p>
+					</div>
+				</div>
 			</section>
 
-			<section id="blog-entry">
-				<h2>Entry 1: Academic Freedom Is Not Just Campus Free Speech</h2>
-				<h3>Published on April 2, 2026</h3>
-				<p>When a university controversy reaches the news, it is usually described as a free speech controversy. Someone was invited to speak, someone protested, someone was disinvited, a professor said something controversial, or a student group objected, and once the story takes that shape one side is defending speech, the other side is accused of censorship, and the university is judged according to whether it allowed the disputed expression to proceed.</p>
-				<p>That frame can be useful, but it often misses what makes universities distinctive. A university is not only a public forum where people say things, but a teaching and research institution whose central work depends on academic judgement. Universities therefore need freedom of expression, but they also need academic freedom, and treating the two as interchangeable makes many campus disputes harder to understand.</p>
-				<p>Freedom of expression protects the ability to speak, listen, object, criticise, protest, and dissent across a wide range of settings. In a university, that freedom belongs to students, staff, faculty, guests, and community members in contexts such as student newspapers, campus protests, public lectures, student club debates, and informal political discussion. Academic freedom protects a narrower set of activities tied to teaching, research, publication, institutional criticism, and academic governance, because those activities cannot be done properly when governments, donors, administrators, employers, or public outrage decide which questions may be asked or which conclusions may be reached.</p>
-				<p>The difference becomes clearer once we notice that universities constantly make content-based judgements. A biology department does not need to give equal time to creationism in a course on evolutionary theory, a history department does not need to treat Holocaust denial as a serious rival interpretation of the Second World War, and a philosophy instructor can reject a paper because its argument is invalid, confused, or unsupported. These are not failures of free inquiry, but ordinary features of academic work, since universities cannot teach, research, grade, publish, hire, or certify expertise without judging evidence, method, disciplinary competence, and intellectual quality.</p>
-				<p>Academic freedom also carries responsibilities, which is why it should not be mistaken for permission to do whatever one likes under the banner of scholarship. Research must answer to evidence, teaching must remain connected to the subject, students must be allowed to learn rather than be coerced into agreement, and criticism must be protected without turning every act of speech into a serious contribution to inquiry. Academic freedom protects the conditions under which disagreement can be pursued with rigour, not a right to be free from criticism, standards, or consequences for professional misconduct.</p>
-				<p>The confusion between free speech and academic freedom makes campus politics easier to manipulate. When every dispute is described as “free speech under attack,” the public is pushed toward a crude question about whether someone was allowed to speak, even when the better questions concern the kind of event, the role of the speaker, the authority of the university, the rights of students, and the standards appropriate to the setting. A public rally, a classroom discussion, a scholarly lecture, a student protest, and a hiring decision all involve expression, but they do not all involve the same norms.</p>
-				<p>The danger becomes especially clear when governments claim to be defending campus free speech. A government can present itself as protecting open debate while imposing rules that weaken institutional autonomy and academic governance. If the state tells universities which policies to adopt, which forms of protest to punish, which admissions criteria count as legitimate, or which public controversies require institutional action, it may protect one version of expression while making academic freedom more fragile.</p>
-				<p>Freedom of expression protects the broad conditions of open campus life, while academic freedom protects the specific work of teaching, research, learning, and scholarly criticism. When those are collapsed into one slogan, universities become harder to defend because the freedoms they actually need become harder to name.</p>
+			<section id="text-section">
+				<h3>Entry 1: Academic Freedom Is Not Just Campus Free Speech</h3>
+				<div class="status">Posted: April 2, 2026</div>
+				<div class="text">
+					<p>When a university controversy reaches the news, it is usually described as a free speech controversy. Someone was invited to speak, someone protested, someone was disinvited, a professor said something controversial, or a student group objected, and once the story takes that shape one side is defending speech, the other side is accused of censorship, and the university is judged according to whether it allowed the disputed expression to proceed.</p>
+					<p>That frame can be useful, but it often misses what makes universities distinctive. A university is not only a public forum where people say things, but a teaching and research institution whose central work depends on academic judgement. Universities therefore need freedom of expression, but they also need academic freedom, and treating the two as interchangeable makes many campus disputes harder to understand.</p>
+					<p>Freedom of expression protects the ability to speak, listen, object, criticise, protest, and dissent across a wide range of settings. In a university, that freedom belongs to students, staff, faculty, guests, and community members in contexts such as student newspapers, campus protests, public lectures, student club debates, and informal political discussion. Academic freedom protects a narrower set of activities tied to teaching, research, publication, institutional criticism, and academic governance, because those activities cannot be done properly when governments, donors, administrators, employers, or public outrage decide which questions may be asked or which conclusions may be reached.</p>
+					<p>The difference becomes clearer once we notice that universities constantly make content-based judgements. A biology department does not need to give equal time to creationism in a course on evolutionary theory, a history department does not need to treat Holocaust denial as a serious rival interpretation of the Second World War, and a philosophy instructor can reject a paper because its argument is invalid, confused, or unsupported. These are not failures of free inquiry, but ordinary features of academic work, since universities cannot teach, research, grade, publish, hire, or certify expertise without judging evidence, method, disciplinary competence, and intellectual quality.</p>
+					<p>Academic freedom also carries responsibilities, which is why it should not be mistaken for permission to do whatever one likes under the banner of scholarship. Research must answer to evidence, teaching must remain connected to the subject, students must be allowed to learn rather than be coerced into agreement, and criticism must be protected without turning every act of speech into a serious contribution to inquiry. Academic freedom protects the conditions under which disagreement can be pursued with rigour, not a right to be free from criticism, standards, or consequences for professional misconduct.</p>
+					<p>The confusion between free speech and academic freedom makes campus politics easier to manipulate. When every dispute is described as “free speech under attack,” the public is pushed toward a crude question about whether someone was allowed to speak, even when the better questions concern the kind of event, the role of the speaker, the authority of the university, the rights of students, and the standards appropriate to the setting. A public rally, a classroom discussion, a scholarly lecture, a student protest, and a hiring decision all involve expression, but they do not all involve the same norms.</p>
+					<p>The danger becomes especially clear when governments claim to be defending campus free speech. A government can present itself as protecting open debate while imposing rules that weaken institutional autonomy and academic governance. If the state tells universities which policies to adopt, which forms of protest to punish, which admissions criteria count as legitimate, or which public controversies require institutional action, it may protect one version of expression while making academic freedom more fragile.</p>
+					<p>Freedom of expression protects the broad conditions of open campus life, while academic freedom protects the specific work of teaching, research, learning, and scholarly criticism. When those are collapsed into one slogan, universities become harder to defend because the freedoms they actually need become harder to name.</p>
+				</div>
 			</section>
 		</main>
 
@@ -70,49 +93,6 @@
 		</footer>
 	</div>
 
-	<script>
-		// Scroll animation and theme toggle
-		(function() {
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('visible');
-					}
-				});
-			}, { threshold: 0.1 });
-
-			document.querySelectorAll('section').forEach(sec => {
-				observer.observe(sec);
-			});
-
-			const toggle = document.getElementById("theme-toggle");
-
-			const savedTheme = localStorage.getItem("theme");
-
-			if (savedTheme === "dark") {
-				document.body.classList.add("light-mode");
-				toggle.checked = true;
-			}
-
-			toggle.addEventListener("change", () => {
-				if (toggle.checked) {
-					document.body.classList.add("light-mode");
-					localStorage.setItem("theme", "dark");
-				} else {
-					document.body.classList.remove("light-mode");
-					localStorage.setItem("theme", "light");
-				}
-			});
-		})();
-	</script>
+	<script src="script.js"></script>
 </body>
 </html>
-
-<!-- 
-List of things to change: 
-	mouseover effects on research interests and nav links
-	space for a photo of me in the sidebar
-	link to CV
-	link to phil papers 
-	link to department page? 
--->

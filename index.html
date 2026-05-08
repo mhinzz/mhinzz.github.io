@@ -12,25 +12,25 @@
 <body>
 	<div class="container">
 		<aside class="sidebar">
-			<header>
-				<h1>Matthew Hinz
-					<label class="theme-switch">
-						<input type="checkbox" id="theme-toggle">
-						<span class="slider"></span>
-					</label>
-				</h1>
-				<p class="affiliation">Masters of Arts Student in Philosophy<br>University of Waterloo</p>
+			<header class="sidebar-header">
+				<div class="header-text">
+					<h1>Matthew Hinz</h1>
+					<p class="affiliation">Masters of Arts Student in Philosophy<br>University of Waterloo</p>
+				</div>
+				<label class="theme-switch">
+					<input type="checkbox" id="theme-toggle">
+					<span class="slider"></span>
+				</label>
 			</header>
 			<nav>
-				<a href="index.html">Home</a>
 				<a href="papers.html">Papers</a>
 				<a href="blog.html">Blog</a>
 			</nav>
 		</aside>
 
 		<main class="main-content">
-			<section id="about">
-				<h2>About Me</h2>
+			<section id="text-section">
+				<h3>About Me</h3>
 				<p>Welcome! I'm an MA Philosophy student at the University of Waterloo.</p>
 				<p>My current project is on how responsibility for AI harms should be distributed among creators, institutions, and users, focusing on both discriminatory screening systems and large language models that are designed to invite misplaced reliance.</p>
 				<p>I completed my undergraduate degree in Computer Science at the University of British Columbia in Vancouver in 2022.</p>
@@ -38,8 +38,8 @@
 				<p>I am always interested in collaborating on research projects. Feel free to reach out!</p>
 			</section>
 
-			<section id="research">
-				<h2>Research Interests</h2>
+			<section id="small-box-section">
+				<h3>Research Interests</h3>
 				<ul>
 					<li>Philosophy of AI / AI Ethics</li>
 					<li>Philosophy of Language</li>
@@ -50,39 +50,39 @@
 			</section>
 
 			<section id="publications">
-				<h2>Publications</h2>
+				<h3>Publications</h3>
 				
-				<div class="publication">
+				<div class="sub-box-section">
 					<div class="title">Your First Paper Title</div>
 					<div class="authors"><strong>Your Name</strong>, Co-Author, Another Author</div>
-					<div class="venue">Conference/Journal Name, 2024</div>
+					<div class="venue">Conference / Journal Name, 2024</div>
 				</div>
 
-				<div class="publication">
+				<div class="sub-box-section">
 					<div class="title">Your Second Paper Title</div>
 					<div class="authors">Co-Author, <strong>Your Name</strong>, Another Author</div>
-					<div class="venue">Conference/Journal Name, 2023</div>
+					<div class="venue">Conference / Journal Name, 2023</div>
 				</div>
 			</section>
 
-			<section id="teaching">
-				<h2>Teaching Assistant Positions</h2>
+			<section id="two-column-section">
+				<h3>Teaching Assistant Positions</h3>
 				<ul>
-					<li><span>PHIL 145</span>Introduction to Critical Thinking (Spring 2026)</li>
-					<li><span>PHIL 228</span>Ethics and AI (Fall 2025)</li>
+					<li><strong>PHIL <wbr>145</strong><span>Introduction to Critical Thinking<br><i>(Spring 2026)</span></i></li>
+					<li><strong>PHIL <wbr>228</strong><span>Ethics and AI<br><i>(Fall 2025)</i></span></li>
 				</ul>
 			</section>
 
-			<section id="news">
-				<h2>News</h2>
+			<section id="point-list">
+				<h3>News</h3>
 				<ul>
 					<li><strong>Sept 2025:</strong> Started a new position at University of Waterloo</li>
 				</ul>
 			</section>
 
-			<section id="contact">
-				<h2><strong>Contact</strong></h2>
-				<p><strong>Email:</strong> <a href="mailto:m2hinz@uwaterloo.ca">m2hinz@uwaterloo.ca</a></p>
+			<section id="emphasis-section">
+				<h3>Contact</h3>
+				<p><strong>Email:</strong> <a href="mailto:m2hinz@uwaterloo.ca">m2hinz<wbr>@uwaterloo.ca</a></p>
 				<!-- <p><strong>Office:</strong> Building Name, Room Number</p> -->
 			</section>
 		</main>
@@ -92,41 +92,7 @@
 		</footer>
 	</div>
 
-	<script>
-		// Scroll animation and theme toggle
-		(function() {
-			const observer = new IntersectionObserver((entries) => {
-				entries.forEach(entry => {
-					if (entry.isIntersecting) {
-						entry.target.classList.add('visible');
-					}
-				});
-			}, { threshold: 0.1 });
-
-			document.querySelectorAll('section').forEach(sec => {
-				observer.observe(sec);
-			});
-
-			const toggle = document.getElementById("theme-toggle");
-
-			const savedTheme = localStorage.getItem("theme");
-
-			if (savedTheme === "dark") {
-				document.body.classList.add("light-mode");
-				toggle.checked = true;
-			}
-
-			toggle.addEventListener("change", () => {
-				if (toggle.checked) {
-					document.body.classList.add("light-mode");
-					localStorage.setItem("theme", "dark");
-				} else {
-					document.body.classList.remove("light-mode");
-					localStorage.setItem("theme", "light");
-				}
-			});
-		})();
-	</script>
+	<script src="script.js"></script>
 </body>
 </html>
 
