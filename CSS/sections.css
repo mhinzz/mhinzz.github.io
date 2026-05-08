@@ -68,9 +68,15 @@ section h3::after {
 }
 
 .sub-box-section .title {
-	font-weight: 600;
+	font-weight: bold;
 	color: var(--accentAlt);
-	font-size: 1.05rem;
+	font-size: 1.25rem;
+}
+
+.sub-box-section .sub-title {
+	font-weight: bold;
+	color: var(--accent);
+	font-size: 1.15rem;
 }
 
 .sub-box-section .authors {

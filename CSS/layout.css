@@ -44,12 +44,13 @@ nav {
 nav a {
 	color: var(--accent);
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: bold;
 	padding: 0.5rem 0;
 	transition: color 0.3s, padding-left 0.3s;
 	border-left: 3px solid transparent;
 	padding-left: 1rem;
 	margin-left: -1rem;
+	margin-top: 0.5rem;
 }
 
 nav a:hover {
@@ -61,7 +62,7 @@ nav a:hover {
 .back-link {
 	color: var(--accent);
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: bold;
 	padding: 0.5rem;
 	transition: color 0.3s, padding-left 0.3s;
 	border-left: 3px solid transparent;
