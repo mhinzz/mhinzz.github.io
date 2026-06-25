@@ -90,6 +90,15 @@ section h3::after {
 	font-size: 0.9rem;
 }
 
+.sub-box-section a {
+	color: var(--accent);
+	text-decoration: none;
+}
+
+.sub-box-section a:hover {
+	text-decoration: underline;
+}
+
 .sub-box-section:hover {
 	transform: translateX(5px);
 }
