@@ -21,16 +21,16 @@ section:hover {
 	box-shadow: 0 4px 30px rgba(0,0,0,1);
 }
 
-section::before {
+/* section::before {
 	content: '';
-	/* position: absolute; */
+	position: absolute;
 	left: -1rem;
 	top: 0;
 	bottom: 0;
 	width: 4px;
 	background: var(--accent);
 	border-radius: 2px;
-}
+} */
 
 section.visible::before {
 	opacity: 1;
@@ -40,19 +40,17 @@ section h3 {
 	font-size: 1.6rem;
 	color: var(--text);
 	padding-bottom: 0.5rem;
-	margin: 0rem;
-	border-bottom: 3px solid var(--accent);
+	margin-bottom: 1rem;
+	margin-top: 0rem;
+	background-image: linear-gradient(
+		to right, 
+		var(--nameText) 0 50px, 
+		var(--accent) 50px 100%
+	);
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	background-size: 100% 3px;
 	position: relative;
-}
-
-section h3::after {
-	content: '';
-	position: absolute;
-	bottom: -3px;
-	left: 0;
-	width: 50px;
-	height: 3px;
-	background: var(--nameText);
 }
 
 
@@ -79,7 +77,7 @@ section h3::after {
 	font-size: 1.15rem;
 }
 
-.sub-box-section .authors {
+.sub-box-section .text {
 	color: var(--text);
 	margin: 0.25rem 0;
 }
@@ -91,7 +89,7 @@ section h3::after {
 }
 
 .sub-box-section a {
-	color: var(--accent);
+	color: var(--text);
 	text-decoration: none;
 }
 
@@ -158,12 +156,6 @@ section h3::after {
 	padding: 0;
 }
 
-/* #two-column-section .section-heading {
-	font-weight: bold;
-	color: var(--test);
-	font-size: 1.25rem;
-	margin-bottom: 1rem;
-} */
 #two-column-section h4 {
 	font-weight: bold;
 	color: var(--accentAlt);
@@ -226,12 +218,12 @@ section h3::after {
 #emphasis-section h3 {
 	font-size: 1.5rem;
 	color: var(--midDark);
-	border-bottom-color: var(--midLight);
+	background-image: linear-gradient(
+		to right, 
+		var(--midDark) 0 50px, 
+		var(--midLight) 50px 100%
+	);
 	text-shadow: none;
-}
-
-#emphasis-section h3::after {
-	background: var(--dark);
 }
 
 #emphasis-section p {
