@@ -46,22 +46,23 @@ function initialiseThemeToggle() {
 
 // Sticky Sidebar Offset
 function initialiseSidebarOffset() {
-	const sidebarHeader = document.querySelector(".sidebar-header");
-
-	if (!sidebarHeader) return;
-
+	const sidebar = document.querySelector(".sidebar");
+	if (!sidebar) return;
+	
+	const navBar = document.querySelector("nav");
+	if (!navBar) return;
+	
 	function updateSidebarHeaderHeight() {
-
 		document.documentElement.style.setProperty(
-			"--sidebar-header-height",
-			`${sidebarHeader.offsetHeight}px`
+			"--sidebar-height",
+			`${sidebar.offsetHeight - navBar.offsetHeight}px`
 		);
 	}
 
 	window.addEventListener("resize", updateSidebarHeaderHeight);
 
 	const observer = new ResizeObserver(updateSidebarHeaderHeight);
-	observer.observe(sidebarHeader);
+	observer.observe(sidebar);
 }
 
 
