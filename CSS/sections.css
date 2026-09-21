@@ -158,12 +158,31 @@ section h3::after {
 	padding: 0;
 }
 
+/* #two-column-section .section-heading {
+	font-weight: bold;
+	color: var(--test);
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+} */
+#two-column-section h4 {
+	font-weight: bold;
+	color: var(--accentAlt);
+	font-size: 1.3rem;
+	margin-top: 0.5rem;
+	margin-bottom: 0rem;
+}
+
+#two-column-section ul {
+	margin-top: 0rem;
+}
+
 #two-column-section li {
 	align-items: center;
 	display: grid;
 	grid-template-columns: 1fr 3fr;
 	gap: 1rem;
-	padding-bottom: 1.5rem;
+	margin-bottom: 1rem;
+	margin-left: 2rem;
 }
 
 #two-column-section li strong {
@@ -178,7 +197,7 @@ section h3::after {
 }
 
 #point-list li {
-	margin-bottom: 1.5rem;
+	margin-bottom: 1rem;
 	position: relative;
 }
 
