@@ -77,6 +77,26 @@ body.light-mode {
 	transform: translateX(24px);
 }
 
+/* Sun & Moon Icons */
+.slider::after {
+	content: "\263E"; /* crescent moon */
+	position: absolute;
+	top: 50%;
+	left: 8px;
+	transform: translateY(-50%);
+	font-size: 14px;
+	color: var(--text);
+	pointer-events: none;
+	transition: left 0.28s ease, color 0.28s ease, transform 0.28s ease;
+}
+
+.theme-switch input:checked + .slider::after {
+	content: "\2600"; /* sun */
+	left: 32px;
+	color: var(--midDark);
+	transform: translateY(-50%);
+}
+
 
 /* Headers */
 h1 {
